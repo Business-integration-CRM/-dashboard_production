@@ -1,0 +1,263 @@
+.progress-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+  }
+  
+  .progress-circle__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 8px solid #3498db; /* Цвет обводки */
+    border-top-color: transparent;
+    transform: rotate(-90deg);
+    transform-origin: center;
+  }
+  
+  .progress-circle__label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @keyframes progress1 {
+    0% { --percentage: 0; }
+    100% { --percentage: var(--value); }
+  }
+  
+  @property --percentage {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  [role="progressbar1"] {
+    --percentage: var(--value);
+    /*: rgb(177, 27, 27);*/
+    --secondary: rgba(246, 248, 250, 0.63);
+    --size: 300px;
+    animation: progress 2s 0.5s forwards;
+    width: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+  }
+  
+  [role="progressbar1"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
+    mask: radial-gradient(white 55%, transparent 0);
+    mask-mode: alpha;
+    -webkit-mask: radial-gradient(#0000 55%, #000 0);
+    -webkit-mask-mode: alpha;
+  }
+  
+  [role="progressbar1"]::after {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--primary);
+  }
+  
+
+
+
+  
+  @keyframes progress2 {
+    0% { --percentage: 0; }
+    100% { --percentage: var(--value); }
+  }
+  
+  @property --percentage {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  [role="progressbar2"] {
+    --percentage: var(--value);
+    /*: rgb(177, 27, 27);*/
+    --secondary: rgba(246, 248, 250, 0.63);
+    --size: 300px;
+    animation: progress 2s 0.5s forwards;
+    width: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+  }
+  
+  [role="progressbar2"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
+    mask: radial-gradient(white 55%, transparent 0);
+    mask-mode: alpha;
+    -webkit-mask: radial-gradient(#0000 55%, #000 0);
+    -webkit-mask-mode: alpha;
+  }
+  
+  [role="progressbar2"]::after {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--primary);
+  }
+
+
+
+
+  .pz4 {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4ee4be;
+    color: #020a06;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pz4:hover {
+    background-color: #45a049;
+  }
+  
+  .pz4:active {
+    background-color: #3e8e41;
+  }
+
+
+
+  .a2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    border-radius: 10px;
+  }
+  p {
+    font-weight: 900;
+  }
+  h1 {
+    font-weight: 900;
+  }
+  h2 {
+    font-weight: 900;
+  }
+  h3 {
+    font-weight: 900;
+  }
+  h4 {
+    font-weight: 900;
+  }
+  h5 {
+    font-weight: 900;
+  }
+  h6 {
+    font-weight: 900;
+  }
+  .my-col {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .container {
+    max-width: 4900px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .er40 {
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+  }
+ th {
+  font-size: 20px;
+  font-weight: bold;
+
+
+ }
+ td {
+  font-size: 20px;
+  font-weight: bold;
+
+
+ }
+ .er450 {
+  font-size: 80px;
+ }
+
+
+
+ .pz42 {
+  
+  font-size: 50px;
+  font-weight: bold;
+  
+}
+
+
+
+.pz45 {
+  
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+.pz46 {
+  
+  
+  font-weight: bold;
+  
+}
+.pz47 {
+  transform: scale(1.0);
+  
+  
+  font-weight: bold;
+  background-color: #ccc;
+  border-radius: 10px;
+  width: 440px;
+  padding: 10px;
+  box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+  
+}
